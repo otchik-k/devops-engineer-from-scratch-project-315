@@ -45,7 +45,8 @@ make full-deploy-prod
 ## Использование
 
 <!-- Добавьте примеры запуска и запись asciinema — именно это смотрит работодатель -->
-<script src="https://asciinema.org/a/PScU69JZVQD3ecqp.js" id="asciicast-PScU69JZVQD3ecqp" async="true"></script>
+<script id="asciicast-PScU69JZVQD3ecqp" src="https://asciinema.org/a/PScU69JZVQD3ecqp.js" async></script>
+
 
 ---
 
