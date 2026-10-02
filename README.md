@@ -9,7 +9,10 @@
 
 ## Стек
 
-- Инструменты
+ - Ansible >= 2.10
+ - Python 3 на управляющей машине и целевом сервере
+ - Целевой сервер: Ubuntu 20.04 / 22.04 (или любой Debian-based)
+
 
 ## Установка
 
@@ -18,6 +21,25 @@
 ```bash
 git clone https://github.com/otchik-k/devops-engineer-from-scratch-project-315.git
 cd devops-engineer-from-scratch-project-315
+
+# установка ролей
+make install-roles
+
+#Отредактируйте `group_vars/all/main.yml`:
+nginx_server_name: "rdgw.kptech.ru"    # ваш домен
+nginx_webroot_path: "/var/www/html"    # путь для ACME-проверки
+spring_profile: prod                   # профиль Spring Boot
+
+#Отредактируйте `inventory.ini`:
+[my_hosts]
+80.240.52.147 ansible_user=kirill
+
+
+# деплой в режиме dev
+make full-deploy-dev
+
+# деплой в режиме prod
+make full-deploy-prod
 ```
 
 ## Использование
