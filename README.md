@@ -45,6 +45,7 @@ make full-deploy-prod
 ## Использование
 
 <!-- Добавьте примеры запуска и запись asciinema — именно это смотрит работодатель -->
+<a href="https://asciinema.org/a/PScU69JZVQD3ecqp" target="_blank"><img src="https://asciinema.org/a/PScU69JZVQD3ecqp.svg" /></a>
 
 ---
 
