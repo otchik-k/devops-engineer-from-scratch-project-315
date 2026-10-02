@@ -46,7 +46,7 @@ make full-deploy-prod
 
 <!-- Добавьте примеры запуска и запись asciinema — именно это смотрит работодатель -->
 
-<script src="https://asciinema.org/a/PScU69JZVQD3ecqp.js" id="asciicast-PScU69JZVQD3ecqp" async="true"></script>
+[![asciicast](https://asciinema.org/a/PScU69JZVQD3ecqp.svg)](https://asciinema.org/a/PScU69JZVQD3ecqp)
 
 ---
 
