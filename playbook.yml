@@ -23,8 +23,9 @@
 
   roles:
     - configure-srv
+    - geerlingguy.docker
     - deploy-sql
-    - s3-storage
+    #- s3-storage
     - deploy-app
     - nginx
     - geerlingguy.certbot

@@ -1,3 +1,6 @@
+install-roles:
+	ansible-galaxy install -r requirements.yml
+
 full-deploy-dev:
 	ansible-playbook -i inventory.ini playbook.yml --ask-vault-pass
 
