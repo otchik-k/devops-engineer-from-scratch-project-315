@@ -7,6 +7,8 @@
 Учебный проект Хекслета: https://ru.hexlet.io/programs/devops-engineer-from-scratch
 Как это должно работать: https://asciinema.org/a/v4evn7XjCdou7Yh71IG0ljb0W
 
+## Данный playbook деплоит приложение на rdgw.kptech.ru
+
 ## Стек
 
  - Ansible >= 2.10
