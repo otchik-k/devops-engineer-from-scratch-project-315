@@ -22,11 +22,11 @@
       when: ssl_cert.stat.exists
 
   roles:
-    #- configure-srv
-    #- geerlingguy.docker
-    #- deploy-sql
+    - configure-srv
+    - geerlingguy.docker
+    - deploy-sql
     - s3-storage
-    #- deploy-app
+    - deploy-app
     - nginx
     - geerlingguy.certbot
 
