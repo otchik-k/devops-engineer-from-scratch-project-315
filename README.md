@@ -7,7 +7,7 @@
 Учебный проект Хекслета: https://ru.hexlet.io/programs/devops-engineer-from-scratch
 Как это должно работать: https://asciinema.org/a/v4evn7XjCdou7Yh71IG0ljb0W
 
-## Данный playbook деплоит приложение на rdgw.kptech.ru
+## Данный playbook деплоит приложение на [rdgw.kptech.ru](https://rdgw.kptech.ru)
 
 ## Стек
 
