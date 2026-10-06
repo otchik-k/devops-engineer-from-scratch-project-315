@@ -4,8 +4,8 @@ image_tag: latest
 
 container_name: bulletin-board
 app_ports:
-  - "8080:8080"
-  - "9090:9090"
+  - "{{ app_port }}:{{ app_port }}"
+  - "{{ management_server_port }}:{{ management_server_port }}"
 
 app_base_dir: "/opt/{{ container_name }}"
 app_data_dir: "{{ app_base_dir }}/data"

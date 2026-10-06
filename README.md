@@ -36,6 +36,13 @@ spring_profile: prod                   # профиль Spring Boot
 [my_hosts]
 80.240.52.147 ansible_user=kirill
 
+# В файле group_vars/all/vault.yml следует указать следующие данные:
+db_user:                # пользователь для базы данных
+db_password:            # пароль пользователя базы данных
+db_name:                # имя базы данных
+minio_root_user:        # root пользователь minio (по умолчанию minioadmin)
+minio_root_password:    # пароль от root пользователя minio (поумолчанию minioadmin123)
+ssh_private_key:        # приватный ключ для подключения по ssh
 
 # деплой в режиме dev
 make full-deploy-dev
@@ -48,7 +55,7 @@ make full-deploy-prod
 
 <!-- Добавьте примеры запуска и запись asciinema — именно это смотрит работодатель -->
 
-<a href="https://asciinema.org/a/PScU69JZVQD3ecqp" target="_blank"><img src="https://asciinema.org/a/PScU69JZVQD3ecqp.svg" /></a>
+[![Демонстрация работы](https://asciinema.org/a/yVNYrtPQ87G7cJEM.png)](https://asciinema.org/a/yVNYrtPQ87G7cJEM)
 
 ---
 

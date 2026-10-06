@@ -6,7 +6,7 @@
   pre_tasks:
     - name: Check if SSL certificate exists
       stat:
-        path: "/etc/letsencrypt/live/{{ nginx_server_name }}/fullchain.pem"
+        path: "/etc/letsencrypt/live/{{ domain }}/fullchain.pem"
       register: ssl_cert
 
     - name: Set HTTP-only vhosts (no cert yet)
@@ -31,7 +31,7 @@
   post_tasks:
       - name: Check if SSL was just issued
         stat:
-          path: "/etc/letsencrypt/live/{{ nginx_server_name }}/fullchain.pem"
+          path: "/etc/letsencrypt/live/{{ domain }}/fullchain.pem"
         register: ssl_cert_now
 
       - name: Reconfigure Nginx with HTTPS (cert just issued)

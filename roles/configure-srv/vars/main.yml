@@ -1,10 +1,10 @@
 ---
 ssh_port: 22
 firewall_ports:
-    - 8080
-    - 9090
-    - 9000
-    - 9001
+    - "{{ app_port }}"
+    - "{{ management_server_port }}"
+    - "{{ minio_api_port }}"
+    - "{{ minio_console_port }}"
 web_ports:
-    - 80
-    - 443
+    - "{{ http_port }}"
+    - "{{ https_port }}"
