@@ -10,5 +10,5 @@ certbot_create_method: "webroot"
 
 certbot_certs:
   - domains:
-      - "{{ nginx_server_name }}"
+      - "{{ domain }}"
     webroot: "{{ nginx_webroot_path }}"

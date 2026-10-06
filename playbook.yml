@@ -4,13 +4,11 @@
   become: true
 
   pre_tasks:
-    # 1. Проверяем, есть ли сертификат
     - name: Check if SSL certificate exists
       stat:
         path: "/etc/letsencrypt/live/{{ nginx_server_name }}/fullchain.pem"
       register: ssl_cert
 
-    # 2. Выбираем конфиг Nginx в зависимости от наличия сертификата
     - name: Set HTTP-only vhosts (no cert yet)
       set_fact:
         nginx_vhosts: "{{ nginx_vhosts_http_only }}"
@@ -28,10 +26,9 @@
     - s3-storage
     - deploy-app
     - nginx
-    - geerlingguy.certbot
+    - cerbot
 
   post_tasks:
-      # Если сертификат появился только что — пересоздаем конфиг Nginx с HTTPS
       - name: Check if SSL was just issued
         stat:
           path: "/etc/letsencrypt/live/{{ nginx_server_name }}/fullchain.pem"
@@ -53,7 +50,6 @@
               state: reloaded
         when: not ssl_cert.stat.exists and ssl_cert_now.stat.exists
 
-      # Создаем хук для автообновления, чтобы Nginx перезагружался сам
       - name: Create certbot renewal deploy hook
         copy:
           dest: /etc/letsencrypt/renewal-hooks/deploy/reload-nginx.sh
