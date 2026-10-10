@@ -26,7 +26,7 @@
     - s3-storage
     - deploy-app
     - nginx
-    - cerbot
+    - certbot
 
   post_tasks:
       - name: Check if SSL was just issued
