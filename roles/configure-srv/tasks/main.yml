@@ -42,13 +42,6 @@
     proto: tcp
   loop: "{{ web_ports }}"
 
-- name: Allow Application ports
-  community.general.ufw:
-    rule: allow
-    port: "{{ item }}"
-    proto: tcp
-  loop: "{{ firewall_ports }}"
-
 - name: Enable UFW
   community.general.ufw:
     state: enabled
