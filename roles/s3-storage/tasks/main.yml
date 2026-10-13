@@ -36,6 +36,7 @@
       - name: "{{ bulletin_network_name }}"
         aliases:
           - "bulletin.minio"
+    ports: "{{ minio_api_port }}:{{ minio_api_port }}"
     state: started
     comparisons:
       "*": strict
