@@ -26,9 +26,6 @@
     command: >-
       server --console-address ":{{ minio_console_port }}" /data
     restart_policy: unless-stopped
-    ports:
-      - "{{ minio_api_port }}:9000"
-      - "{{ minio_console_port }}:{{ minio_console_port }}"
     volumes:
       - "{{ minio_data_dir }}:/data"
     env:
@@ -42,17 +39,6 @@
     state: started
     comparisons:
       "*": strict
-
-- name: Wait for MinIO to be ready
-  ansible.builtin.uri:
-    url: "http://localhost:{{ minio_api_port }}/{{ minio_container_name }}/health/live"
-    method: GET
-    return_content: true
-    status_code: 200
-  register: minio_health
-  retries: 10
-  delay: 3
-  until: minio_health.status == 200
 
 - name: Create MinIO bucket
   ansible.builtin.command: >
